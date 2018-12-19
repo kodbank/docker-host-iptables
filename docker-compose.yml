@@ -1,0 +1,31 @@
+  version: '3'
+  services:
+     nagios:
+       container_name: nagios
+       image: jasonrivers/nagios
+       restart: always
+       networks:
+         compose:
+           ipv4_address: 192.168.240.2
+       ports:
+         - "80:80"
+     unifi:
+       container_name: unifi
+       image: jacobalberty/unifi
+       restart: always
+       networks:
+         compose:
+           ipv4_address: 192.168.240.3
+       ports:
+         - "8443:8443"
+         - "8080:8080"
+         - "3478:3478/udp"
+
+  networks:
+    compose:
+      ipam:
+        driver: default
+        config:
+          - subnet: 192.168.240.0/24
+      driver_opts:
+        com.docker.network.bridge.enable_ip_masquerade: "true"
