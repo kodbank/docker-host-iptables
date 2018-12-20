@@ -2,7 +2,6 @@
 
 input="INPUT-CUSTOM"
 
-
 iptables -t filter -F $input
 iptables -t filter -F DOCKER-USER
 ip6tables -t filter -F $input
