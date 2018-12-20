@@ -1,2 +1,2 @@
 # docker-host-iptables
-Custom iptables Rules for Docker Hosts
+Custom iptables Rules for Debian Docker Hosts
