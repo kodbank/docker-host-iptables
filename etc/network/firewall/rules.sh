@@ -18,4 +18,5 @@ ip6tables -A $input -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT -m comm
 # end custom rules
 
 iptables -A $input -j RETURN
+iptables -A DOCKER-USER -j RETURN
 ip6tables -A $input -j RETURN
