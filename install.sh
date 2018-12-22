@@ -9,4 +9,3 @@ chmod +x /etc/network/firewall/init.sh
 chmod +x /etc/network/firewall/rules.sh
 systemctl enable firewall-init
 systemctl enable firewall
-reboot
